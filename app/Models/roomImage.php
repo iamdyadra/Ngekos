@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use illuminate\Database\Eloquent\factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class roomImage extends Model
+{
+    use HasFactory, SoftDeletes;
+    
+    protected $fillable = [
+        'room_id',
+        'image'
+    ];
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
+}

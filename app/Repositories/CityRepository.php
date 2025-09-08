@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Repositories\CityRepositoryInterface;
+use App\Interfaces\CityRepositoryInterface;
 use App\Models\City;
 class CityRepository implements CityRepositoryInterface
 { 
@@ -10,4 +10,4 @@ class CityRepository implements CityRepositoryInterface
     {
     return City::all();
     }
-}
+};
